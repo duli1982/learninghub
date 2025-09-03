@@ -235,34 +235,35 @@
         </header>
 
         <!-- Global Search Bar -->
-        <div class="search-container mb-12">
+        <div class="search-container mb-12" role="search">
             <div class="relative">
-                <svg class="search-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="search-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
                 <input type="text" id="global-search" class="search-input"
-                    placeholder="Search across all modules, content, and resources..." autocomplete="off">
-                <button class="clear-search" id="clear-search" title="Clear search">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    placeholder="Search across all modules, content, and resources..." autocomplete="off"
+                    aria-label="Search all content">
+                <button class="clear-search" id="clear-search" aria-label="Clear search">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                         </path>
                     </svg>
                 </button>
 
                 <!-- Search Results Dropdown -->
-                <div class="search-results" id="search-results">
+                <div class="search-results" id="search-results" role="listbox" aria-label="Search results">
                     <div class="search-suggestions">
-                        <div class="search-suggestions-title">Popular Searches</div>
-                        <span class="search-suggestion-tag" data-search="AI training">AI Training</span>
-                        <span class="search-suggestion-tag" data-search="prompts">Prompts</span>
-                        <span class="search-suggestion-tag" data-search="resume">Resume</span>
-                        <span class="search-suggestion-tag" data-search="sourcing">Sourcing</span>
-                        <span class="search-suggestion-tag" data-search="boolean">Boolean</span>
-                        <span class="search-suggestion-tag" data-search="leadership">Leadership</span>
-                        <span class="search-suggestion-tag" data-search="create framework">CREATE Framework</span>
-                        <span class="search-suggestion-tag" data-search="automation">Automation</span>
-                        <span class="search-suggestion-tag" data-search="success stories">Success Stories</span>
+                        <div class="search-suggestions-title" id="suggestions-title">Popular Searches</div>
+                        <button class="search-suggestion-tag" data-search="AI training">AI Training</button>
+                        <button class="search-suggestion-tag" data-search="prompts">Prompts</button>
+                        <button class="search-suggestion-tag" data-search="resume">Resume</button>
+                        <button class="search-suggestion-tag" data-search="sourcing">Sourcing</button>
+                        <button class="search-suggestion-tag" data-search="boolean">Boolean</button>
+                        <button class="search-suggestion-tag" data-search="leadership">Leadership</button>
+                        <button class="search-suggestion-tag" data-search="create framework">CREATE Framework</button>
+                        <button class="search-suggestion-tag" data-search="automation">Automation</button>
+                        <button class="search-suggestion-tag" data-search="success stories">Success Stories</button>
                     </div>
                     <div id="search-results-content">
                         <!-- Dynamic search results will appear here -->
@@ -275,63 +276,72 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto" id="modules-grid">
 
                 <a href="/rpo-training/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="rpo ai acceleration program training curriculum foundations leadership strategy modules phases">
-                    <h3 class="google-sans text-2xl font-bold mb-2">RPO AI Acceleration Program</h3>
-                    <p class="text-gray-600">The complete, multi-phase training curriculum for all RPO team members,
+                    data-keywords="rpo ai acceleration program training curriculum foundations leadership strategy modules phases"
+                    aria-label="RPO AI Acceleration Program: The complete, multi-phase training curriculum for all RPO team members, from AI foundations to leadership strategy.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">RPO AI Acceleration Program</h3>
+                    <p class="text-gray-600" aria-hidden="true">The complete, multi-phase training curriculum for all RPO team members,
                         from AI foundations to leadership strategy.</p>
                 </a>
 
                 <a href="/gbs-ai-workshop/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="gbs leaders guide interactive training prompt libraries simulators case studies workshop">
-                    <h3 class="google-sans text-2xl font-bold mb-2">Guide for GBS Leaders</h3>
-                    <p class="text-gray-600">An interactive training for GBS leaders, complete with prompt libraries,
+                    data-keywords="gbs leaders guide interactive training prompt libraries simulators case studies workshop"
+                    aria-label="Guide for GBS Leaders: An interactive training for GBS leaders, complete with prompt libraries, simulators, and case studies.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">Guide for GBS Leaders</h3>
+                    <p class="text-gray-600" aria-hidden="true">An interactive training for GBS leaders, complete with prompt libraries,
                         simulators, and case studies.</p>
                 </a>
 
                 <a href="/daily-focus/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="daily sourcing focus micro-coaching tool actionable cards talent sourcers skills">
-                    <h3 class="google-sans text-2xl font-bold mb-2">Daily Sourcing Focus</h3>
-                    <p class="text-gray-600">A daily micro-coaching tool with actionable focus cards designed to sharpen
+                    data-keywords="daily sourcing focus micro-coaching tool actionable cards talent sourcers skills"
+                    aria-label="Daily Sourcing Focus: A daily micro-coaching tool with actionable focus cards designed to sharpen the skills of our talent sourcers.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">Daily Sourcing Focus</h3>
+                    <p class="text-gray-600" aria-hidden="true">A daily micro-coaching tool with actionable focus cards designed to sharpen
                         the skills of our talent sourcers.</p>
                 </a>
 
                 <a href="/gbs-prompts/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="gbs ai prompts library comprehensive searchable expert prompts daily tasks professionals">
-                    <h3 class="google-sans text-2xl font-bold mb-2">GBS AI Prompts Library</h3>
-                    <p class="text-gray-600">A comprehensive and searchable library of expert prompts designed to
+                    data-keywords="gbs ai prompts library comprehensive searchable expert prompts daily tasks professionals"
+                    aria-label="GBS AI Prompts Library: A comprehensive and searchable library of expert prompts designed to accelerate daily tasks for GBS professionals.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">GBS AI Prompts Library</h3>
+                    <p class="text-gray-600" aria-hidden="true">A comprehensive and searchable library of expert prompts designed to
                         accelerate daily tasks for GBS professionals.</p>
                 </a>
 
                 <a href="/knowledge-content/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="knowledge content wealth resources information learning materials documentation">
-                    <h3 class="google-sans text-2xl font-bold mb-2">Knowledge Content</h3>
-                    <p class="text-gray-600">Access a wealth of knowledge content here.</p>
+                    data-keywords="knowledge content wealth resources information learning materials documentation"
+                    aria-label="Knowledge Content: Access a wealth of knowledge content here.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">Knowledge Content</h3>
+                    <p class="text-gray-600" aria-hidden="true">Access a wealth of knowledge content here.</p>
                 </a>
 
                 <a href="/ai-sme/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="ai sme subject matter expert knowledge resources artificial intelligence expertise">
-                    <h3 class="google-sans text-2xl font-bold mb-2">AI SME</h3>
-                    <p class="text-gray-600">Explore expert AI knowledge and resources.</p>
+                    data-keywords="ai sme subject matter expert knowledge resources artificial intelligence expertise"
+                    aria-label="AI SME: Explore expert AI knowledge and resources.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">AI SME</h3>
+                    <p class="text-gray-600" aria-hidden="true">Explore expert AI knowledge and resources.</p>
                 </a>
 
                 <a href="/use-cases/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="ai success stories real-world examples case studies transforms daily work randstad gbs impact">
-                    <h3 class="google-sans text-2xl font-bold mb-2">AI Success Stories</h3>
-                    <p class="text-gray-600">Real-world examples and case studies showcasing how AI transforms daily
+                    data-keywords="ai success stories real-world examples case studies transforms daily work randstad gbs impact"
+                    aria-label="AI Success Stories: Real-world examples and case studies showcasing how AI transforms daily work at Randstad GBS. See the impact firsthand.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">AI Success Stories</h3>
+                    <p class="text-gray-600" aria-hidden="true">Real-world examples and case studies showcasing how AI transforms daily
                         work at Randstad GBS. See the impact firsthand.</p>
                 </a>
 
                 <a href="/sourcing-workshop/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="sourcing workshop advanced techniques market intelligence candidate engagement coming soon">
-                    <h3 class="google-sans text-2xl font-bold mb-2">Sourcing Workshop</h3>
-                    <p class="text-gray-600">An in-depth workshop dedicated to advanced sourcing techniques, market
+                    data-keywords="sourcing workshop advanced techniques market intelligence candidate engagement coming soon"
+                    aria-label="Sourcing Workshop: An in-depth workshop dedicated to advanced sourcing techniques, market intelligence, and candidate engagement. (Coming Soon)">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">Sourcing Workshop</h3>
+                    <p class="text-gray-600" aria-hidden="true">An in-depth workshop dedicated to advanced sourcing techniques, market
                         intelligence, and candidate engagement. (Coming Soon)</p>
                 </a>
 
                 <a href="/microlearning/" class="hub-card bg-white p-8 rounded-xl block"
-                    data-keywords="microlearning daily learning 5-minute sessions quick learning">
-                    <h3 class="google-sans text-2xl font-bold mb-2">Microlearning Modules</h3>
-                    <p class="text-gray-600">5-minute daily learning sessions to quickly boost your skills.</p>
+                    data-keywords="microlearning daily learning 5-minute sessions quick learning"
+                    aria-label="Microlearning Modules: 5-minute daily learning sessions to quickly boost your skills.">
+                    <h3 class="google-sans text-2xl font-bold mb-2" aria-hidden="true">Microlearning Modules</h3>
+                    <p class="text-gray-600" aria-hidden="true">5-minute daily learning sessions to quickly boost your skills.</p>
                 </a>
 
             </div>
@@ -340,7 +350,7 @@
             <div class="no-results hidden" id="no-results">
                 <div class="text-center py-12">
                     <svg class="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
+                        viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33">
                         </path>
