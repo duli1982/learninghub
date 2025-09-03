@@ -1,0 +1,37 @@
+{
+    "module-1": {
+        "title": "Module 1: Prompting & Writing — The C.R.E.A.T.E. Framework",
+        "questions": [
+            {
+                "question": "What does the 'C' in the C.R.E.A.T.E. framework stand for?",
+                "options": [
+                    "Context",
+                    "Character",
+                    "Clarity",
+                    "Conclusion"
+                ],
+                "answer": "Character"
+            },
+            {
+                "question": "Which of the following is NOT a part of the C.R.E.A.T.E. framework?",
+                "options": [
+                    "Request",
+                    "Examples",
+                    "Review",
+                    "Type"
+                ],
+                "answer": "Review"
+            },
+            {
+                "question": "Why is it important to provide 'Examples' in a prompt?",
+                "options": [
+                    "To make the prompt longer",
+                    "To show the AI what a good output looks like",
+                    "To confuse the AI",
+                    "To test the AI's knowledge"
+                ],
+                "answer": "To show the AI what a good output looks like"
+            }
+        ]
+    }
+}
