@@ -30,6 +30,10 @@
 
         <!-- Main Page (Table of Contents) -->
         <div id="main-page" class="page active">
+            <div id="progress-container" class="mb-8 p-4 bg-blue-50 border border-blue-200 rounded-lg" style="display: none;">
+                <h3 class="google-sans text-xl font-bold mb-2">Your Progress</h3>
+                <div id="progress-list"></div>
+            </div>
             <div class="content-section text-center">
                 <h2 class="google-sans text-4xl font-bold text-gray-800">Full Training Curriculum</h2>
                 <p class="mt-4 text-lg text-gray-600">Welcome to the complete training portal for the RPO AI
@@ -153,7 +157,14 @@
     <div id="footer-placeholder"></div>
     <script src="../shared/scripts/footer.js" defer></script>
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore-compat.js"></script>
+    <script src="../shared/scripts/firebase-config.js"></script>
+
     <script src="js/app.js"></script>
+    <script src="js/progress.js"></script>
     <script src="../shared/scripts/smooth-scroll.js" defer></script>
 
 </body>
