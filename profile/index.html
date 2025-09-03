@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microlearning Modules - Randstad GBS Learning Hub</title>
+    <title>Profile - Randstad GBS Learning Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Link to the shared color palette -->
     <link rel="stylesheet" href="../shared/ai-sme-colors.css">
     <script>
-        // Tailwind config using the new CSS variables
         tailwind.config = {
             theme: {
                 extend: {
@@ -32,7 +30,6 @@
         }
     </script>
     <style>
-        /* You can add page-specific styles here if needed */
         body {
             background-color: var(--ai-bg);
             color: var(--ai-text);
@@ -41,7 +38,6 @@
 </head>
 <body class="bg-brand-bg text-brand-body font-sans leading-relaxed">
 
-    <!-- Header & Navigation (Consistent with index.html) -->
     <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="../index.html" class="text-2xl font-bold text-brand-dark flex items-center">
@@ -50,21 +46,26 @@
             </a>
             <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
                 <a href="../index.html" class="text-brand-body hover:text-brand-primary transition-colors duration-300">Home</a>
-                <a href="/login/" class="text-brand-body hover:text-brand-primary transition-colors duration-300">Login</a>
+                <a href="/profile/" class="text-brand-body hover:text-brand-primary transition-colors duration-300">Profile</a>
             </nav>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12 md:py-20">
+        <section class="max-w-md mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-ai-heading mb-8 text-center">User Profile</h1>
 
-        <section>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-ai-heading mb-4">Microlearning Modules</h1>
-            <p class="text-lg md:text-xl text-ai-text mb-8">
-                Welcome to our 5-minute daily learning sessions. These modules are designed to provide quick and effective learning experiences.
-            </p>
-
+            <div id="user-info" class="bg-white p-6 rounded-lg border border-ai-border shadow-ai-sm space-y-4">
+                <p><strong>Name:</strong> <span id="user-name"></span></p>
+                <p><strong>Email:</strong> <span id="user-email"></span></p>
+                <button id="logout-button" class="w-full mt-4 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                    Logout
+                </button>
+            </div>
+            <div id="loading-state" class="text-center">
+                <p>Loading user information...</p>
+            </div>
         </section>
-
     </main>
 
     <div id="footer-placeholder"></div>
@@ -74,6 +75,7 @@
     <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-auth-compat.js"></script>
     <script src="../shared/scripts/firebase-config.js"></script>
+    <script src="profile.js" defer></script>
 
 </body>
 </html>
