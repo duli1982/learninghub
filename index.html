@@ -228,10 +228,11 @@
 
     <div class="container mx-auto px-4 py-12 md:py-20">
 
-        <header class="text-center mb-12">
+        <header class="text-center mb-12 relative">
             <h1 class="google-sans text-4xl md:text-5xl font-bold text-gray-900">Randstad GBS Learning Hub</h1>
             <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">A central portal for our AI training programs,
                 sourcing tools, and interactive workshops.</p>
+            <a href="/login/" class="absolute top-0 right-0 mt-4 mr-4 text-sm font-medium text-brand-primary hover:text-brand-primary-hover">Login</a>
         </header>
 
         <!-- Global Search Bar -->
@@ -367,6 +368,11 @@
 
     <div id="footer-placeholder"></div>
     <script src="shared/scripts/footer.js" defer></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-auth-compat.js"></script>
+    <script src="shared/scripts/firebase-config.js"></script>
 
     <script>
         // Global Search Functionality with Site-wide Content Search
