@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microlearning Modules - Randstad GBS Learning Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to the shared color palette -->
+    <link rel="stylesheet" href="../shared/ai-sme-colors.css">
+    <script>
+        // Tailwind config using the new CSS variables
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-primary': 'var(--ai-accent)',
+                        'brand-primary-hover': 'var(--ai-accent-hover)',
+                        'brand-dark': 'var(--ai-heading)',
+                        'brand-body': 'var(--ai-text)',
+                        'brand-muted': 'var(--ai-text)',
+                        'brand-bg': 'var(--ai-bg)',
+                        'brand-card-bg': 'var(--ai-card)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* You can add page-specific styles here if needed */
+        body {
+            background-color: var(--ai-bg);
+            color: var(--ai-text);
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-body font-sans leading-relaxed">
+
+    <!-- Header & Navigation (Consistent with index.html) -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-brand-dark flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-brand-primary"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                Randstad GBS Learning Hub
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-brand-body hover:text-brand-primary transition-colors duration-300">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <section>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-ai-heading mb-4">Microlearning Modules</h1>
+            <p class="text-lg md:text-xl text-ai-text mb-8">
+                Welcome to our 5-minute daily learning sessions. These modules are designed to provide quick and effective learning experiences.
+            </p>
+
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="../shared/scripts/footer.js" defer></script>
+
+</body>
+</html>
